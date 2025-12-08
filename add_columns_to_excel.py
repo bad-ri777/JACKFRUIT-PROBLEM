@@ -33,4 +33,3 @@ def add_rate(z):
         row_1 += 1
 
     wb.save(EXCEL_FILE)
-
