@@ -1,12 +1,13 @@
-import streamlit as st
-import pandas as pd
-import plotly.express as px
-import os
+def output(x):
 
-def func():
+    import streamlit as st
+    import pandas as pd
+    import plotly.express as px
+    import os
+
     st.set_page_config(page_title="Inventory Dashboard", layout="wide")
     st.title("Inventory Dashboard")
-    file_path = r'C:\Users\aksps\OneDrive\Python\Jackfruit\items.xlsx'
+    file_path = x
 
     if os.path.exists(file_path):
         try:
@@ -15,11 +16,11 @@ def func():
             else:
                 df = pd.read_excel(file_path)
                 
-            with open(r'C:\Users\aksps\OneDrive\Python\Jackfruit\items.xlsx', "rb") as file:
+            with open(x, "rb") as file:
                 btn = st.download_button(
                     label="Excel File",
                     data=file,
-                    file_name=r':\Users\aksps\OneDrive\Python\Jackfruit\items.xlsx',
+                    file_name="items.xlsx",
                     mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
                 )
              
@@ -151,5 +152,4 @@ def func():
         st.error(f"File not found at path: {file_path}")
         st.info("Please check if the file path is correct and the file exists.")
 
-if __name__ == "__main__":
-    func()
+output(r"C:\Users\HP\OneDrive\Documents\JACKFRUIT\JACKFRUIT-PROBLEM\items.xlsx")
