@@ -1,6 +1,2 @@
 # JACKFRUIT-PROBLEM
-A simple OCR-powered tool that digitizes handwritten shop records and turns them into searchable data. Our project helps small shop owners view summaries, generate charts, and manage their daily numbers with ease.
-
-### Digit Extraction Module
-* **`digit_extractor.py`**: This module contains the core OCR pipeline. It accepts a folder of cropped form cells, preprocesses the images to match MNIST standards, and aggregates the recognized digits into structured NumPy arrays (Serial No, Rate, Quantity) for further processing.
-* **`mnist_high_acc_model.keras`**: A pre-trained Convolutional Neural Network (CNN) optimized for digit classification. This model serves as the inference engine used by the extractor to identify numerical data with high accuracy.
+Digitizing Handwritten Invoices Using Machine Learning is a system that converts handwritten shop bills into structured digital data for easy storage, correction, and analysis. The project uses image processing and a CNN-based digit recognition model to extract numerical values from handwritten invoices, while handwritten item names are processed using the Gemini handwriting-recognition API with dictionary-based correction. The extracted data is exported to an editable Excel file and visualized through a simple Streamlit interface, enabling small shop owners to review records and understand sales patterns without changing their existing paper-based workflow.
